@@ -166,7 +166,7 @@
         <div class="row">
 
             <div class="col-md-6">
-                <img src="asset/images/cyber.jpg" class="d-block w-100 img-fluid" style="height:500px" alt="...">
+                <img src="assets/images/entreprise/cyber.jpg" class="d-block w-100 img-fluid" style="height:500px" alt="...">
             </div>
 
             <div class="col-md-6 ">
@@ -230,7 +230,7 @@
             </div>
 
             <div class="col-md-6">
-                <img src="asset/images/com.jpg" class="d-block w-100 img-fluid" style="height:500px" alt="...">
+                <img src="assets/images/entreprise/com.jpg" class="d-block w-100 img-fluid" style="height:500px" alt="...">
             </div>
 
         </div>
@@ -240,7 +240,7 @@
         <div class="row">
 
             <div class="col-md-6">
-                <img src="asset/images/coders.jpg" class="d-block w-100 img-fluid" style="height:500px" alt="...">
+                <img src="assets/images/entreprise/coders.jpg" class="d-block w-100 img-fluid" style="height:500px" alt="...">
             </div>
 
             <div class="col-md-6 ">
@@ -452,9 +452,5 @@
         animateElements();
     </script>
 
-    <script src="{{ asset('assets/js/vendor/vendor.min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/plugins.min.js') }}"></script>
-
-    <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
+   
 @endsection

@@ -1,30 +1,31 @@
 @extends('composant/header_footer')
 
 @section('content')
-<style>
-    body{
-    background-color: antiquewhite;;
-    font-size: 25px;
-}
-</style>
-<div class="card mb-3">
-    <div class="breadcrumb-wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h3 class="breadcrumb-title">Contactez-nous</h3>
-                    <div class="breadcrumb-nav breadcrumb-nav-color--black breadcrumb-nav-hover-color--golden">
-                        <nav aria-label="breadcrumb">
-                            <ul>
-                                <li><a href="{{ url('../index') }}">Home</a></li>
-                                <li class="active" aria-current="page">Contact Us</li>
-                            </ul>
-                        </nav>
+    <style>
+        body {
+            background-color: antiquewhite;
+            ;
+            font-size: 25px;
+        }
+    </style>
+    <div class="card mb-3">
+        <div class="breadcrumb-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="breadcrumb-title">Contactez-nous</h3>
+                        <div class="breadcrumb-nav breadcrumb-nav-color--black breadcrumb-nav-hover-color--golden">
+                            <nav aria-label="breadcrumb">
+                                <ul>
+                                    <li><a href="{{ url('../index') }}">Home</a></li>
+                                    <li class="active" aria-current="page">Contact Us</li>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
         <div class="container">
 
             <div class="row no-gutters justify-content-center aos-init aos-animate" data-aos="fade-up">
@@ -49,9 +50,7 @@
                             <h4>Call:</h4>
                             <p>+229 61149953 </p>
                         </div>
-
                     </div>
-
                 </div>
 
                 <div class="col-lg-5 d-flex align-items-stretch">
@@ -63,25 +62,34 @@
 
             <div class="row mt-5 justify-content-center aos-init aos-animate" data-aos="fade-up">
                 <div class="col-lg-10">
-                    <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                    <form action="{{ route('contacter') }}" method="post" role="form" class="php-email-form">
+                        @csrf
+
+                        @if (session('success'))
+                            <div class="alert alert-success " style="text-align: center">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+
                         <div class="row">
                             <div class="col-md-6 form-group">
                                 <input type="text" name="name" class="form-control" id="name"
                                     placeholder="Your Name" required="">
                             </div>
+
                             <div class="col-md-6 form-group mt-3 mt-md-0">
                                 <input type="email" class="form-control" name="email" id="email"
                                     placeholder="Your Email" required="">
                             </div>
+
                         </div>
                         <div class="form-group mt-3">
-                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
-                                required="">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
                         </div>
                         <div class="form-group mt-3">
                             <textarea class="form-control" name="message" rows="5" placeholder="Message" required=""></textarea>
                         </div><br>
-                       
+
                         <div class="text-center"><button type="submit">Envoyer</button></div>
                     </form>
                 </div>
@@ -89,9 +97,7 @@
             </div>
 
         </div>
-        
-    </section>
-    
 
-    
-@endsection
+        </section>
+        <button class="material-scrolltop reveal" type="button"></button>
+    @endsection

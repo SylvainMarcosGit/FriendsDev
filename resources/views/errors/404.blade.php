@@ -15,7 +15,7 @@
                         <div class="breadcrumb-nav breadcrumb-nav-color--black breadcrumb-nav-hover-color--golden">
                             <nav aria-label="breadcrumb">
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="{{ url('../accueil') }}">Home</a></li>
                                     <li><a href="#">Page</a></li>
                                     <li class="active" aria-current="page">404 Page</li>
                                 </ul>
@@ -39,14 +39,14 @@
                     <div class="row">
                         <div class="col-10 offset-1 col-md-4 offset-md-4">
                            
-                            <a href="index.html" class="btn btn-md btn-black-default-hover mt-7" data-aos="fade-up"
-                                data-aos-delay="800">Back to home page</a>
+                            <a href="{{ url('../accueil') }}" class="btn btn-md btn-black-default-hover mt-7" data-aos="fade-up"
+                                data-aos-delay="800">Aller à l'accueil</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div> <!-- ...:::: End Error Section :::... -->@readonly(true)
+    </div> 
 
     <script src="{{asset('assets/js/vendor/vendor.min.js')}}"></script>
 <script src="{{asset('assets/js/plugins/plugins.min.js')}}"></script>
